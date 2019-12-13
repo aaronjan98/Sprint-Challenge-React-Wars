@@ -9,8 +9,8 @@ function CharList(){
         axios
           .get(`https://swapi.co/api/people/?format=json`)
           .then(response => {
-            console.log(response.data);
-            setCharInfo(response.data);
+            console.log(response.data.results);
+            setCharInfo(response.data.results);
           })
           .catch(error => {
             console.log("the data was not returned", error);
@@ -19,13 +19,19 @@ function CharList(){
 
       return (
         <div className="char-container">
-              <CharCard
+            {charInfo.map((button, index) => (
+                <CharCard
+                    key={index}
+                    button={button}
+                />
+            ))}
+              {/* <CharCard
                // key={charInfo.service_version}
                 name={charInfo.name}
                 height={charInfo.height}
                 mass={charInfo.mass}
                 hairColor={charInfo.hair_color}
-              />
+              /> */}
         </div>
       );
 }

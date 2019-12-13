@@ -1,13 +1,13 @@
 import React from "react";
 
 const CharCard = props => {
-    
+    console.log(props.button);
     return (
         <div>
-            <h1>{props.name}</h1>
-            <p>{props.height}</p>
-            <p>{props.mass}</p>
-            <p>{props.hair_color}</p>
+            <h1>{props.button.name}</h1>
+            <p>{props.button.height}</p>
+            <p>{props.button.mass}</p>
+            <p>{props.button.hair_color}</p>
         </div>
     );
 }
