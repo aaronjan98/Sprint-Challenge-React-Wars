@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import CharCard from './CharCard';
-import { Container, Row } from "reactstrap";
+import { Row } from "reactstrap";
 
 function CharList(){
     const [charInfo, setCharInfo] = useState([]);

@@ -1,13 +1,14 @@
-import React from "react";
-import { Card, CardHeader, CardBody,
-    CardTitle, CardText } from 'reactstrap';
+import React from 'react';
+import { Card, CardTitle, CardBody, CardText } from 'reactstrap';
+import { CardHeaderDiv } from './Styles';
+
 
 const CharCard = props => {
     console.log(props.button);
     return (
         <div>
             <Card>
-                <CardHeader tag="h3">{props.button.name}</CardHeader>
+                <CardHeaderDiv tag="h3">{props.button.name}</CardHeaderDiv>
                 <CardBody>
                     <CardTitle>Birth Year: {props.button.birth_year}</CardTitle>
                     <CardText>Gender: {props.button.gender}</CardText>
