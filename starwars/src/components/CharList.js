@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import CharCard from './CharCard';
+import { Container, Row } from "reactstrap";
 
 function CharList(){
     const [charInfo, setCharInfo] = useState([]);
@@ -19,19 +20,14 @@ function CharList(){
 
       return (
         <div className="char-container">
-            {charInfo.map((button, index) => (
-                <CharCard
-                    key={index}
-                    button={button}
-                />
-            ))}
-              {/* <CharCard
-               // key={charInfo.service_version}
-                name={charInfo.name}
-                height={charInfo.height}
-                mass={charInfo.mass}
-                hairColor={charInfo.hair_color}
-              /> */}
+            <Row>
+                {charInfo.map((button, index) => (
+                    <CharCard
+                        key={index}
+                        button={button}
+                    />
+                ))}
+            </Row>
         </div>
       );
 }
