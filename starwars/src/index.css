@@ -5,3 +5,11 @@ body {
   background-image: url('./sw-bg.jpg');
   background-size: cover;
 }
+.starwars {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+.card {
+  margin: 10px;
+}

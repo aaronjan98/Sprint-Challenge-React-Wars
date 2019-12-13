@@ -20,7 +20,7 @@ function CharList(){
 
       return (
         <div className="char-container">
-            <Row>
+            <Row className="starwars">
                 {charInfo.map((button, index) => (
                     <CharCard
                         key={index}
