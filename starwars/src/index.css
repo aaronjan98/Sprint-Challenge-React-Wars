@@ -5,6 +5,11 @@ body {
   background-image: url('./sw-bg.jpg');
   background-size: cover;
 }
+.Header {
+  font-size: 4rem;
+  padding: 10px;
+}
+
 .starwars {
   display: flex;
   justify-content: space-evenly;
